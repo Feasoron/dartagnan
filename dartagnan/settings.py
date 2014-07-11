@@ -118,9 +118,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dartagnan.menu',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'dartagnan.menu'
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
