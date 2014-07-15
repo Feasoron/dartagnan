@@ -15,6 +15,8 @@ class MenuItem(models.Model):
     description = models.CharField(max_length=600)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     category = models.ForeignKey(Category)
+    isOnSale = models.BooleanField()
+    salePrice = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
 
     def __unicode__(self):
         return self.name

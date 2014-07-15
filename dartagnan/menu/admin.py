@@ -2,7 +2,7 @@ from django.contrib import admin
 from dartagnan.menu.models import Category, MenuItem
 
 
-class MenuItemsInline(admin.StackedInline):
+class MenuItemsInline(admin.TabularInline):
     model = MenuItem
     extra = 1
 
