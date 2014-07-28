@@ -20,3 +20,34 @@ class MenuItem(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Hours(models.Model):
+    isOpen = models.BooleanField()
+    open = models.TimeField(null=True)
+    closed = models.TimeField(null=True)
+
+
+class Address(models.Model):
+    class Meta:
+        verbose_name_plural = "addresses"
+    streetAddress = models.CharField()
+    city = models.CharField()
+    state = models.CharField(max_lenght=2)
+    zipCode = models.CharField(max_length=10)
+    restaurant = models.ForeignKey(RestaurantInfo)
+
+    def __unicode__(self):
+        return self.streetAddress + ' ' + self.city + ', ' + self.state + ' ' + self.zipCode
+
+
+class RestaurantInfo(models.Model):
+    name = models.CharField(max_length=100)
+    aboutUs = models.CharField()
+    founded = models.DateField()
+
+
+    def __unicode__(self):
+        return self.name
+
+
