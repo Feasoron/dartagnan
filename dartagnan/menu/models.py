@@ -37,17 +37,26 @@ class HoursOnDay(models.Model):
 
 
 class Day(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=10)
     hours = models.ManyToManyField(HoursOnDay)
+
+
+class RestaurantInfo(models.Model):
+    name = models.CharField(max_length=100)
+    aboutUs = models.CharField(max_length=10000)
+    founded = models.DateField()
+
+    def __unicode__(self):
+        return self.name
 
 
 class Address(models.Model):
     class Meta:
         verbose_name_plural = "addresses"
 
-    streetAddress = models.CharField()
-    city = models.CharField()
-    state = models.CharField(max_lenght=2)
+    streetAddress = models.CharField(max_length=100)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=2)
     zipCode = models.CharField(max_length=10)
     restaurant = models.ForeignKey(RestaurantInfo)
     openDays = models.ManyToManyField(Day)
@@ -61,12 +70,5 @@ class Address(models.Model):
         return self.streetAddress + ' ' + self.city + ', ' + self.state + ' ' + self.zipCode
 
 
-class RestaurantInfo(models.Model):
-    name = models.CharField(max_length=100)
-    aboutUs = models.CharField()
-    founded = models.DateField()
-
-    def __unicode__(self):
-        return self.name
 
 
