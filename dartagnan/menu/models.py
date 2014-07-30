@@ -30,17 +30,6 @@ class Hours(models.Model):
     closed = models.TimeField(null=True)
 
 
-class HoursOnDay(models.Model):
-    is_open = models.BooleanField()
-    open = models.TimeField(null=True)
-    closed = models.TimeField(null=True)
-
-
-class Day(models.Model):
-    name = models.CharField(max_length=10)
-    hours = models.ManyToManyField(HoursOnDay)
-
-
 class RestaurantInfo(models.Model):
     name = models.CharField(max_length=100)
     aboutUs = models.CharField(max_length=10000)
@@ -50,7 +39,7 @@ class RestaurantInfo(models.Model):
         return self.name
 
 
-class Address(models.Model):
+class Location(models.Model):
     class Meta:
         verbose_name_plural = "addresses"
 
@@ -59,7 +48,27 @@ class Address(models.Model):
     state = models.CharField(max_length=2)
     zipCode = models.CharField(max_length=10)
     restaurant = models.ForeignKey(RestaurantInfo)
-    openDays = models.ManyToManyField(Day)
+
+    monday_opens_at = models.TimeField(null=True)
+    monday_closes_at = models.TimeField(null=True)
+
+    tuesday_opens_at = models.TimeField(null=True)
+    tuesday_closes_at = models.TimeField(null=True)
+
+    wednesday_opens_at = models.TimeField(null=True)
+    wednesday_closes_at = models.TimeField(null=True)
+
+    thursday_opens_at = models.TimeField(null=True)
+    thursday_closes_at = models.TimeField(null=True)
+
+    friday_opens_at = models.TimeField(null=True)
+    friday_closes_at = models.TimeField(null=True)
+
+    saturday_opens_at = models.TimeField(null=True)
+    saturday_closes_at = models.TimeField(null=True)
+
+    sunday_opens_at = models.TimeField(null=True)
+    sunday_closes_at = models.TimeField(null=True)
 
     def is_open_at(self, day_to_check, time_of_day):
         hours_for_today = self.openDays.first(name=day_to_check).hours
