@@ -24,12 +24,6 @@ class MenuItem(models.Model):
         return self.name
 
 
-class Hours(models.Model):
-    isOpen = models.BooleanField()
-    open = models.TimeField(null=True)
-    closed = models.TimeField(null=True)
-
-
 class RestaurantInfo(models.Model):
     name = models.CharField(max_length=100)
     aboutUs = models.CharField(max_length=10000)

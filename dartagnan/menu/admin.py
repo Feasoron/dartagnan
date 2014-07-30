@@ -1,5 +1,5 @@
 from django.contrib import admin
-from dartagnan.menu.models import Category, MenuItem
+from dartagnan.menu.models import Category, MenuItem, RestaurantInfo, Location
 
 
 class MenuItemsInline(admin.TabularInline):
@@ -15,3 +15,5 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(RestaurantInfo)
+admin.site.register(Location)
