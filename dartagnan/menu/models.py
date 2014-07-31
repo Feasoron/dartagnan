@@ -65,6 +65,7 @@ class Location(models.Model):
     sunday_closes_at = models.TimeField(null=True)
 
     def is_open_at(self, day_to_check, time_of_day):
+
         hours_for_today = self.openDays.first(name=day_to_check).hours
 
         return hours_for_today.open <= time_of_day <= hours_for_today.closed
