@@ -1,0 +1,6 @@
+{{ category }}
+<ul>
+{% for item in category.menuitem_set.all %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>

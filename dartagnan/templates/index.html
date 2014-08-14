@@ -1,7 +1,16 @@
-{% if rest_info %}<ul>
+{% if rest_info %}
+    <ul>
     {{ rest_info.name }}
-    </ul>
 
+    </ul>
+<ul>
+    {% for category in categories %}
+    <li>
+    <a href="/menu/category/{{ category.title }}">{{ category.title }}</a>
+
+    </li>
+    {% endfor %}
+</ul>
 {% else %}
-    <p>No restaraunt data was found.</p>
+    <p>No restaurant data was found.</p>
 {% endif %}

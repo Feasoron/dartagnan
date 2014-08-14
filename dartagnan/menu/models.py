@@ -43,26 +43,26 @@ class Location(models.Model):
     zipCode = models.CharField(max_length=10)
     restaurant = models.ForeignKey(RestaurantInfo)
 
-    monday_opens_at = models.TimeField(null=True)
-    monday_closes_at = models.TimeField(null=True)
+    monday_opens_at = models.TimeField(null=True, blank=True)
+    monday_closes_at = models.TimeField(null=True, blank=True)
 
-    tuesday_opens_at = models.TimeField(null=True)
-    tuesday_closes_at = models.TimeField(null=True)
+    tuesday_opens_at = models.TimeField(null=True, blank=True)
+    tuesday_closes_at = models.TimeField(null=True, blank=True)
 
-    wednesday_opens_at = models.TimeField(null=True)
-    wednesday_closes_at = models.TimeField(null=True)
+    wednesday_opens_at = models.TimeField(null=True, blank=True)
+    wednesday_closes_at = models.TimeField(null=True, blank=True)
 
-    thursday_opens_at = models.TimeField(null=True)
-    thursday_closes_at = models.TimeField(null=True)
+    thursday_opens_at = models.TimeField(null=True, blank=True)
+    thursday_closes_at = models.TimeField(null=True, blank=True)
 
-    friday_opens_at = models.TimeField(null=True)
-    friday_closes_at = models.TimeField(null=True)
+    friday_opens_at = models.TimeField(null=True, blank=True)
+    friday_closes_at = models.TimeField(null=True, blank=True)
 
-    saturday_opens_at = models.TimeField(null=True)
-    saturday_closes_at = models.TimeField(null=True)
+    saturday_opens_at = models.TimeField(null=True, blank=True)
+    saturday_closes_at = models.TimeField(null=True, blank=True)
 
-    sunday_opens_at = models.TimeField(null=True)
-    sunday_closes_at = models.TimeField(null=True)
+    sunday_opens_at = models.TimeField(null=True, blank=True)
+    sunday_closes_at = models.TimeField(null=True, blank=True)
 
     def is_open_at(self, day_to_check, time_of_day):
 
