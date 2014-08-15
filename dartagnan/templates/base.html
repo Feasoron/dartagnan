@@ -5,7 +5,9 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% load static from staticfiles %}
 
+<link href="{% static 'basestyle.css' %}" rel="stylesheet" type="text/css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <head lang="en">
@@ -13,11 +15,13 @@
     <title>Dartagnan Hosting</title>
 </head>
 <body>
+<div class="container">
 <div class="jumbotron">
     <h1>{{ rest_name }}</h1>
 </div>
  {% block main_body %}
     <p>Here is our content that will be overwritten</p>
   {% endblock %}
+</div>
 </body>
 </html>
