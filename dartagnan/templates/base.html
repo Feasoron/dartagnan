@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 <!-- Latest compiled and minified CSS -->
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-<!-- Optional theme -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 {% load static from staticfiles %}
 
 <link href="{% static 'basestyle.css' %}" rel="stylesheet" type="text/css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 <head lang="en">
     <meta charset="UTF-8">
     <title>Dartagnan Hosting</title>
 </head>
 <body>
-<div class="container">
+<div class="header container">
 <div class="jumbotron">
     <h1>{{ rest_name }}</h1>
 </div>
+</div>
+<div class="container">
+
  {% block main_body %}
     <p>Here is our content that will be overwritten</p>
   {% endblock %}

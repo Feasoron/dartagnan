@@ -1,3 +1,25 @@
+body{
+    background-color: whitesmoke;
+    font: roboto;
+}
+
+.container{
+    padding-top: 10px;
+     background-color: whitesmoke;
+}
+
+.header{
+    background-color: ghostwhite;
+    width: 100%;
+}
+
 .jumbotron{
-    background-color: coral;
+    background-color: darkslategray;
+    color: #507B9E;
+}
+
+.nav li{
+    background-color: darkslategray;
+    color: #507B9E;
+    border-radius: 6px;
 }
