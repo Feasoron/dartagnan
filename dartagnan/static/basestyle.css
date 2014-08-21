@@ -1,12 +1,42 @@
 body{
     padding-top: 70px;
     padding-bottom: 30px;
-    background-color: whitesmoke;
-    font: roboto;
+
+    font-family: roboto;
+
+    background: #f7fbfc; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f7fbfc 0%, #d9edf2 40%, #add9e4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7fbfc), color-stop(40%,#d9edf2), color-stop(100%,#add9e4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f7fbfc 0%,#d9edf2 40%,#add9e4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=0 ); /* IE6-9 */
+
+}
+
+.container.main{
+
+    padding-top: 10px;
+    border-radius: 6px;
+
+    background: #add9e4; /* Old browsers */
+    background: -moz-linear-gradient(top, #add9e4 0%, #d9edf2 60%, #f7fbfc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#add9e4), color-stop(60%,#d9edf2), color-stop(100%,#f7fbfc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #add9e4 0%,#d9edf2 60%,#f7fbfc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #add9e4 0%,#d9edf2 60%,#f7fbfc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #add9e4 0%,#d9edf2 60%,#f7fbfc 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #add9e4 0%,#d9edf2 60%,#f7fbfc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add9e4', endColorstr='#f7fbfc',GradientType=0 ); /* IE6-9 */
 }
 
 .navbar-fixed-top{
+    font-family: Nunito;
     color: ghostwhite;
+}
+
+.navbar-brand{
+    font-size:24px;
 }
 .header{
     background-color: whitesmoke;
@@ -29,8 +59,16 @@ body{
 }
 
 .jumbotron{
+    background-image: url('./images/pizzadough.jpg');
     background-color: darkslategray;
+    background-position-y: -100px;
     color: #507B9E;
+}
+
+.jumbotron h1{
+    text-shadow: 4px -4px 6px black;
+    margin-top: -20px;
+    padding-bottom: 20px;
 }
 
 .nav li{
