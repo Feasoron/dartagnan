@@ -1,12 +1,10 @@
 body{
+    padding-top: 70px;
+    padding-bottom: 30px;
     background-color: whitesmoke;
     font: roboto;
 }
 
-.container{
-    padding-top: 68px;
-     background-color: whitesmoke;
-}
 .navbar-fixed-top{
     color: ghostwhite;
 }
