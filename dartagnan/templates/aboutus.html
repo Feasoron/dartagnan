@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
-{% block main_body %}
-<ul class="nav nav-pills">
-    <li class="active"><a href="about">About Us</a></li>
+{% block nav_bar %}
+     <li class="active"><a href="about">About Us</a></li>
     <li><a href="/">Menu</a></li>
     <li><a href="locations">Locations</a></li>
-</ul>
+{% endblock %}
+
+{% block main_body %}
+
 <div class="about_us well">
-{{ about_us.aboutUs|linebreaks}}
+    <h1>About Us</h1>
+    <h2>{{ rest_name }} - founded {{ founded }}</h2>
+    {{ about_us.aboutUs|linebreaks}}
 </div>
+
 {% endblock %}

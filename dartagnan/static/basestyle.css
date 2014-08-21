@@ -2,7 +2,7 @@ body{
     padding-top: 70px;
     padding-bottom: 30px;
 
-    font-family: roboto;
+  /*  font-family: roboto; */
 
     background: #f7fbfc; /* Old browsers */
     background: -moz-linear-gradient(top,  #f7fbfc 0%, #d9edf2 40%, #add9e4 100%); /* FF3.6+ */
@@ -16,7 +16,7 @@ body{
 }
 
 .container.main{
-
+    min-height: 90%;
     padding-top: 10px;
     border-radius: 6px;
 
@@ -30,19 +30,6 @@ body{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add9e4', endColorstr='#f7fbfc',GradientType=0 ); /* IE6-9 */
 }
 
-.navbar-fixed-top{
-    font-family: Nunito;
-    color: ghostwhite;
-}
-
-.navbar-brand{
-    font-size:24px;
-}
-.header{
-    background-color: whitesmoke;
-    width: 100%;
-}
-
 .about_us{
     text-indent: 30px;
 }
@@ -50,12 +37,6 @@ body{
 .about_us p{
     margin-top: 20px;
     width: 75%;
-}
-
-.whitename{
-    padding-left: 20px;
-    font-size: 18px;
-    padding-top: 10px;
 }
 
 .jumbotron{
@@ -69,10 +50,4 @@ body{
     text-shadow: 4px -4px 6px black;
     margin-top: -20px;
     padding-bottom: 20px;
-}
-
-.nav li{
-    background-color: darkslategray;
-    color: #507B9E;
-    border-radius: 6px;
 }

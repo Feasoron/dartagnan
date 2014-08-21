@@ -14,16 +14,23 @@
     </head>
 <body role="document">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <a href="/" class="navbar-brand">{{ rest_name }}</a>
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">{{ rest_name }}</a>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            {% block nav_bar %}
+            {% endblock %}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
     <div class="container main" role="main">
         <div class="jumbotron">
             <h1>{{ rest_name }}</h1>
         </div>
      {% block main_body %}
-        <p>Here is our content that will be overwritten</p>
       {% endblock %}
     </div>
 </body>

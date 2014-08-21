@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
+{% block nav_bar %}
+     <li><a href="../about">About Us</a></li>
+     <li><a href="../../">Menu</a></li>
+     <li><a href="../locations">Locations</a></li>
+{% endblock %}
+
 {% block main_body %}
-<ul class="nav nav-pills">
-        <li><a href="../about">About Us</a></li>
-        <li><a href="../../">Menu</a></li>
-        <li><a href="../locations">Locations</a></li>
-      </ul>
 <div class="well">
 {{ category }}
 <ul class="well">
