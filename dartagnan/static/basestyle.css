@@ -4,13 +4,30 @@ body{
 }
 
 .container{
-    padding-top: 10px;
+    padding-top: 68px;
      background-color: whitesmoke;
 }
-
+.navbar-fixed-top{
+    color: ghostwhite;
+}
 .header{
-    background-color: ghostwhite;
+    background-color: whitesmoke;
     width: 100%;
+}
+
+.about_us{
+    text-indent: 30px;
+}
+
+.about_us p{
+    margin-top: 20px;
+    width: 75%;
+}
+
+.whitename{
+    padding-left: 20px;
+    font-size: 18px;
+    padding-top: 10px;
 }
 
 .jumbotron{

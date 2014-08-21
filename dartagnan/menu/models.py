@@ -26,7 +26,7 @@ class MenuItem(models.Model):
 
 class RestaurantInfo(models.Model):
     name = models.CharField(max_length=100)
-    aboutUs = models.CharField(max_length=10000)
+    aboutUs = models.TextField(max_length=10000)
     founded = models.DateField()
 
     def __unicode__(self):

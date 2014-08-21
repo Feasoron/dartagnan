@@ -18,8 +18,10 @@ def category(request, category_name):
 
 
 def about_us(request):
+    about_us = RestaurantInfo.objects.first()
     template = loader.get_template('aboutus.html')
     context = get_context(request, {
+        'about_us': about_us
     })
     return HttpResponse(template.render(context))
 

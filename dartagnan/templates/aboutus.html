@@ -2,9 +2,11 @@
 
 {% block main_body %}
 <ul class="nav nav-pills">
-        <li class="active"><a href="about">About Us</a></li>
-        <li><a href="/">Menu</a></li>
-        <li><a href="locations">Locations</a></li>
-      </ul>
-{{ category }}
+    <li class="active"><a href="about">About Us</a></li>
+    <li><a href="/">Menu</a></li>
+    <li><a href="locations">Locations</a></li>
+</ul>
+<div class="about_us">
+{{ about_us.aboutUs|linebreaks}}
+</div>
 {% endblock %}
