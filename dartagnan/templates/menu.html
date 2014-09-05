@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block nav_bar %}
+     <li><a href=" about">About Us</a></li>
+     <li class="active"><a href="#">Menu</a></li>
+     <li><a href="locations">Locations</a></li>
+{% endblock %}
+
+{% block main_body %}
+{% if rest_info %}
+<ul class="well">
+    {% for category in categories %}
+    <li>
+    <a href="/menu/category/{{ category.title }}">{{ category.title }}</a>
+
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No restaurant data was found.</p>
+{% endif %}
+{% endblock %}

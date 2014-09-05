@@ -2,21 +2,23 @@
 
 {% block nav_bar %}
      <li><a href="menu/about">About Us</a></li>
-     <li class="active"><a href="#">Menu</a></li>
+     <li><a href="menu">Menu</a></li>
      <li><a href="menu/locations">Locations</a></li>
 {% endblock %}
 
 {% block main_body %}
-{% if rest_info %}
-<ul class="well">
-    {% for category in categories %}
-    <li>
-    <a href="/menu/category/{{ category.title }}">{{ category.title }}</a>
 
-    </li>
-    {% endfor %}
+<ul class="well">
+ {% for location in locations %}
+<li>
+    <h2>{{ location.city }}, {{ location.state }}</h2>
+     <iframe
+      width="300"
+      height="300"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBZZDDXxSgOkfy6afmagV28dNfyXuXX5-E&q={{ location }}">
+    </iframe>
+</li>
+ {% endfor %}
 </ul>
-{% else %}
-    <p>No restaurant data was found.</p>
-{% endif %}
 {% endblock %}

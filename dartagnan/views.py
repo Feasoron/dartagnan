@@ -7,10 +7,9 @@ from dartagnan.menu.helpers import get_context
 
 def index(request):
     rest_info = RestaurantInfo.objects.first()
+    locations = rest_info.location_set.all()
     template = loader.get_template('index.html')
     context = get_context(request, {
-        'restaurant_name': rest_info.name,
-        'rest_info': rest_info,
-        'categories': Category.objects.all()
+        'locations': locations
     })
     return HttpResponse(template.render(context))

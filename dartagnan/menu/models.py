@@ -34,8 +34,6 @@ class RestaurantInfo(models.Model):
 
 
 class Location(models.Model):
-    class Meta:
-        verbose_name_plural = "addresses"
 
     streetAddress = models.CharField(max_length=100)
     city = models.CharField(max_length=50)

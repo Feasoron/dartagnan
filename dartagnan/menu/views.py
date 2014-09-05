@@ -4,9 +4,15 @@ from dartagnan.menu.helpers import get_context
 from django.template import RequestContext, loader
 
 
-def index(request):
-    return HttpResponse("You have reached the main page for D'Artagnan Hosting. This is the menu view.")
-
+def menu(request):
+    rest_info = RestaurantInfo.objects.first()
+    template = loader.get_template('index.html')
+    context = get_context(request, {
+        'restaurant_name': rest_info.name,
+        'rest_info': rest_info,
+        'categories': Category.objects.all()
+    })
+    return HttpResponse(template.render(context))
 
 def category(request, category_name):
     selected_category = Category.objects.get(title=category_name)
