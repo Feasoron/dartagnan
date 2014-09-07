@@ -10,15 +10,22 @@
 
 <ul class="well">
  {% for location in locations %}
-<li>
-    <h2>{{ location.city }}, {{ location.state }}</h2>
+    {% if forloop.first or forloop.counter|add:"-1"|divisibleby:"3" %}
+      <div class="row">
+    {% endif %}
+
+        <div class="col-md-4">
+        <h2>{{ location.city }}, {{ location.state }}</h2>
      <iframe
       width="300"
       height="300"
       frameborder="0" style="border:0"
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBZZDDXxSgOkfy6afmagV28dNfyXuXX5-E&q={{ location }}">
     </iframe>
-</li>
+        </div>
+    {% if forloop.last or forloop.counter|divisibleby:"3"  %}
+       </div>
+    {% endif %}
  {% endfor %}
 </ul>
 {% endblock %}
