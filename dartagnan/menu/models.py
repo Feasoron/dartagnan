@@ -1,5 +1,4 @@
 from django.db import models
-import datetime
 
 
 class Category(models.Model):
@@ -17,7 +16,7 @@ class MenuItem(models.Model):
     description = models.CharField(max_length=600)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     category = models.ForeignKey(Category)
-    isOnSale = models.BooleanField()
+    isOnSale = models.BooleanField(default=False)
     salePrice = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
 
     def __unicode__(self):
@@ -39,7 +38,6 @@ class Location(models.Model):
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=2)
     zipCode = models.CharField(max_length=10)
-    restaurant = models.ForeignKey(RestaurantInfo)
 
     monday_opens_at = models.TimeField(null=True, blank=True)
     monday_closes_at = models.TimeField(null=True, blank=True)

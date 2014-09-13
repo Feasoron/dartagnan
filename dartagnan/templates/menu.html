@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block main_body %}
-{% if rest_info %}
 <ul class="well">
     {% for category in categories %}
     <li>
@@ -16,7 +15,4 @@
     </li>
     {% endfor %}
 </ul>
-{% else %}
-    <p>No restaurant data was found.</p>
-{% endif %}
 {% endblock %}

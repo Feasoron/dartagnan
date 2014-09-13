@@ -6,11 +6,12 @@ from django.template import RequestContext, loader
 
 def menu(request):
     rest_info = RestaurantInfo.objects.first()
-    template = loader.get_template('index.html')
+    template = loader.get_template('menu.html')
+    categories =  Category.objects.all()
     context = get_context(request, {
         'restaurant_name': rest_info.name,
         'rest_info': rest_info,
-        'categories': Category.objects.all()
+        'categories': categories
     })
     return HttpResponse(template.render(context))
 
@@ -20,6 +21,7 @@ def category(request, category_name):
     context = get_context(request, {
         'category': selected_category
     })
+
     return HttpResponse(template.render(context))
 
 
@@ -29,6 +31,7 @@ def about_us(request):
     context = get_context(request, {
         'about_us': about_us
     })
+
     return HttpResponse(template.render(context))
 
 
@@ -36,4 +39,5 @@ def locations(request):
     template = loader.get_template('locations.html')
     context = get_context(request, {
     })
+
     return HttpResponse(template.render(context))
