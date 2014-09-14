@@ -9,6 +9,11 @@
 {% block main_body %}
 
 <ul class="well">
+   {% if locations|length > 0 %}
+    <h2>Visit us at one of our {{ locations|length }} convenient locations</h2>
+    {% else %}
+       <h2>Visit Us</h2>
+    {% endif %}
  {% for location in locations %}
     {% if forloop.first or forloop.counter|add:"-1"|divisibleby:"3" %}
       <div class="row">
