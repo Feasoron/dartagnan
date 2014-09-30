@@ -39,14 +39,16 @@ body{
 }
 
 .jumbotron{
-    background-image: url('./images/pizzadough.jpg');
+    background-image: url('./images/jumbotron-bg.jpg');
     background-color: darkslategray;
     background-position-y: -100px;
     color: #507B9E;
 }
 
 .jumbotron h1{
-    text-shadow: 4px -4px 6px black;
+    text-align:center;
     margin-top: -20px;
     padding-bottom: 20px;
+    font-family:'Open Sans', Myriad, Calibri, sans-serif;
+    color: ghostwhite;
 }
