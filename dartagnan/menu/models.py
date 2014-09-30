@@ -18,6 +18,7 @@ class MenuItem(models.Model):
     category = models.ForeignKey(Category)
     isOnSale = models.BooleanField(default=False)
     salePrice = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+    hidden = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.name
@@ -26,6 +27,7 @@ class MenuItem(models.Model):
 class RestaurantInfo(models.Model):
     name = models.CharField(max_length=100)
     aboutUs = models.TextField(max_length=10000)
+    introBlurb = models.TextField(max_length=2000)
     founded = models.DateField()
 
     def __unicode__(self):

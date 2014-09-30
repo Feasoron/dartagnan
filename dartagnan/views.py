@@ -9,6 +9,7 @@ def index(request):
     locations = Location.objects.all()
     template = loader.get_template('index.html')
     context = get_context(request, {
-        'locations': locations
+        'locations': locations,
+        'blurb':  RestaurantInfo.objects.first().introBlurb
     })
     return HttpResponse(template.render(context))
