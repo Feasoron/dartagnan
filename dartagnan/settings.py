@@ -122,7 +122,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'dartagnan',
-    'dartagnan.menu'
+    'dartagnan.menu',
+    'autoslug'
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

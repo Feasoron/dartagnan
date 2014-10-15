@@ -7,7 +7,7 @@ from django.template import RequestContext, loader
 def menu(request):
     rest_info = RestaurantInfo.objects.first()
     template = loader.get_template('menu.html')
-    categories =  Category.objects.all()
+    categories = Category.objects.all()
     context = get_context(request, {
         'restaurant_name': rest_info.name,
         'rest_info': rest_info,
@@ -16,7 +16,7 @@ def menu(request):
     return HttpResponse(template.render(context))
 
 def category(request, category_name):
-    selected_category = Category.objects.get(title=category_name)
+    selected_category = Category.objects.get(slug=category_name)
     template = loader.get_template('category.html')
     context = get_context(request, {
         'category': selected_category

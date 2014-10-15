@@ -1,4 +1,5 @@
 from django.db import models
+from autoslug import AutoSlugField
 
 
 class Category(models.Model):
@@ -6,6 +7,7 @@ class Category(models.Model):
         verbose_name_plural = "categories"
 
     title = models.CharField(max_length=100)
+    slug = AutoSlugField(populate_from='title', default='')
 
     def __unicode__(self):
         return self.title
